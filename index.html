@@ -4,20 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crestron CH5 Test</title>
-    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Style sheets -->
     <link rel="stylesheet" href="node_modules/@crestron/ch5-theme/output/themes/light-theme.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
 
 </head>
 
 <body>
-    <ch5-button type="default" shape="rectangle" label="Button 1" sendeventonclick="11" receivestateselected="11"></ch5-button>
-    <ch5-button type="default" shape="rectangle" label="Button 2" sendeventonclick="12" receivestateselected="12"></ch5-button>
+    <div class="header">
+        <ch5-button iconclass="fas fa-angle-double-left" type="default" shape="rectangle" size="large" sendeventonclick="11" receivestateselected="11"></ch5-button>
+        <ch5-button type="default" shape="rectangle" label="Button 2" size="large" sendeventonclick="12" receivestateselected="12"></ch5-button>
+    </div>
 
+    <div class="zone">
+        <ch5-list id="Zone.Contact" indexId="idx1" size="20" orientation="vertical" gestureable="true" scrollbar="true" receivestatesize="Zone.Contact.Size">
+            <template>
+            <div class="zone-list-item">
+                <ch5-button 
+                id="list-btn"
+                iconclass="fas fa-angle-double-left"
+                iconposition="top"
+                stretch="both"
+                shape="rectangle"
+                customclass="zone-list-btn"
+                customclasspressed="zone-list-btn-pressed"
+                sendEventOnClick="Zone[{{idx1}}].Select" 
+                receiveStateSelected="Zone[{{idx1}}].Selected"
+                receivestatelabel="Zone[{{idx1}}].Label"
+                label="Room {{idx1}}"
+                ></ch5-button>
+            </div> 
+        </template>
+        </ch5-list>
+    </div>
+    <div class="device">
+        <ch5-list id="Device.Contact" indexId="idx2" size="20" orientation="vertical" gestureable="true" scrollbar="true" receivestatesize="Device.Contact.Size">
+            <template>
+            <div class="zone-list-item">
+                <ch5-button 
+                id="list-btn"
+                iconclass="fas fa-angle-double-left"
+                iconposition="top"
+                stretch="both"
+                shape="rectangle"
+                customclass="zone-list-btn"
+                customclasspressed="device-list-btn-pressed"
+                sendEventOnClick="Device[{{idx2}}].Select" 
+                receiveStateSelected="Device[{{idx2}}].Selected"
+                receivestatelabel="Device[{{idx2}}].Label"
+                label="Device {{idx1}}"
+                ></ch5-button>
+            </div> 
+        </template>
+        </ch5-list>
+    </div>
 
+    <div class="volume">
 
+    </div>
+    <div class="volume volume-expanded">
+
+    </div>
 
     <script src="node_modules/@crestron/ch5-crcomlib/build_bundles/umd/cr-com-lib.js"></script>
-
 
     <!-- For emulator -->
     <script src="./assets/vendor/service.js"></script>

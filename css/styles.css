@@ -1,0 +1,80 @@
+    * {
+        margin: 0%;
+        padding: 0%;
+    }
+    
+    div {
+        background-color: #120136;
+        border-style: solid;
+        border-color: white;
+        border-top-style: none;
+        border-width: thin;
+    }
+    
+    .header {
+        height: 9%;
+    }
+    
+    .zone {
+        position: absolute;
+        width: 12%;
+        height: 91%;
+        text-align: center;
+    }
+    
+    .device {
+        position: absolute;
+        width: 12%;
+        height: 91%;
+        left: 11.5%;
+    }
+    
+    .volume {
+        position: absolute;
+        width: 8%;
+        height: 91%;
+        left: 92%;
+    }
+    
+    .volume-expanded {
+        width: 33%;
+        left: 67%;
+    }
+    
+    .zone-list-item {
+        display: table;
+        width: 100%;
+        height: 12%;
+        color: white;
+        border: none;
+        padding: 0;
+    }
+    /*  .zone-list-item span {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    } */
+    
+    div.list-item {
+        padding: 0;
+    }
+    
+    div.zone-list-btn {
+        background-color: transparent;
+        color: white;
+        /*  width: 100%;
+        height: 100%; */
+    }
+    
+    div.zone-list-btn-pressed {
+        background-color: blue;
+        color: black;
+    }
+    
+    div.device-list-btn-pressed {
+        background-color: orangered;
+        color: black;
+    }
+    /*   #list-btn {
+        width: 100%;
+    } */
