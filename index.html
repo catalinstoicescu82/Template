@@ -1,0 +1,27 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crestron CH5 Test</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="node_modules/@crestron/ch5-theme/output/themes/light-theme.css">
+
+</head>
+
+<body>
+    <ch5-button type="default" shape="rectangle" label="Button 1" sendeventonclick="11" receivestateselected="11"></ch5-button>
+    <ch5-button type="default" shape="rectangle" label="Button 2" sendeventonclick="12" receivestateselected="12"></ch5-button>
+
+
+
+
+    <script src="node_modules/@crestron/ch5-crcomlib/build_bundles/umd/cr-com-lib.js"></script>
+
+
+    <!-- For emulator -->
+    <script src="./assets/vendor/service.js"></script>
+    <script src="./assets/vendor/app.js"></script>
+</body>
+
+</html>
