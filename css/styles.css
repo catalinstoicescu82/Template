@@ -2,12 +2,13 @@
         margin: 0%;
         padding: 0%;
     }
+    /* Div's */
     
     div {
-        background-color: #120136;
+        background-color: transparent;
         border-style: solid;
         border-color: white;
-        border-top-style: none;
+        border-top: none;
         border-width: thin;
     }
     
@@ -20,6 +21,7 @@
         width: 12%;
         height: 91%;
         text-align: center;
+        border-bottom: none;
     }
     
     .device {
@@ -27,6 +29,16 @@
         width: 12%;
         height: 91%;
         left: 11.5%;
+        border-bottom: none;
+    }
+    
+    .middle {
+        background-color: transparent;
+        position: absolute;
+        width: 68.8%;
+        height: 91%;
+        left: 23.4%;
+        border-bottom: none;
     }
     
     .volume {
@@ -34,12 +46,16 @@
         width: 8%;
         height: 91%;
         left: 92%;
+        border-bottom: none;
     }
     
     .volume-expanded {
         width: 33%;
         left: 67%;
+        visibility: hidden;
+        border-bottom: none;
     }
+    /* Lists */
     
     .zone-list-item {
         display: table;
@@ -49,32 +65,46 @@
         border: none;
         padding: 0;
     }
-    /*  .zone-list-item span {
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
-    } */
     
-    div.list-item {
+    .device-list-item {
+        display: table;
+        width: 100%;
+        height: 12%;
+        color: white;
+        border: none;
         padding: 0;
     }
     
-    div.zone-list-btn {
+    div.list-item {
+        padding: 0;
         background-color: transparent;
-        color: white;
-        /*  width: 100%;
-        height: 100%; */
+        border: none;
     }
     
-    div.zone-list-btn-pressed {
+    div.zone-list-btn.ch5-button--default.ch5-button--selected {
         background-color: blue;
         color: black;
     }
     
-    div.device-list-btn-pressed {
+    div.device-list-btn.ch5-button--default.ch5-button--selected {
         background-color: orangered;
         color: black;
     }
-    /*   #list-btn {
-        width: 100%;
-    } */
+    /* Buttons */
+    
+    .zone-list-btn,
+    .device-list-btn,
+    .transparent-btn {
+        background-color: transparent;
+        color: white;
+        border-color: white;
+    }
+    
+    .icon-btn {
+        position: ;
+        border: none;
+    }
+    
+    .extend-btn {
+        left: 90%;
+    }

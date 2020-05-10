@@ -14,9 +14,11 @@
 </head>
 
 <body>
+    <ch5-background url="assets/images/ch5-stone-dark-bg.jpg">
+    </ch5-background>
     <div class="header">
-        <ch5-button iconclass="fas fa-angle-double-left" type="default" shape="rectangle" size="large" sendeventonclick="11" receivestateselected="11"></ch5-button>
-        <ch5-button type="default" shape="rectangle" label="Button 2" size="large" sendeventonclick="12" receivestateselected="12"></ch5-button>
+        <ch5-button customclass="icon-btn transparent-btn extend-btn" iconclass="fas fa-angle-double-left fa-2x" type="default" shape="rectangle" stretch="height" sendeventonclick="11" receivestateselected="11"></ch5-button>
+        <ch5-button customclass="icon-btn transparent-btn background-btn" iconclass="fas fa-angle-double-left fa-2x" type="default" shape="rectangle" stretch="height" sendeventonclick="12" receivestateselected="12"></ch5-button>
     </div>
 
     <div class="zone">
@@ -24,13 +26,12 @@
             <template>
             <div class="zone-list-item">
                 <ch5-button 
-                id="list-btn"
-                iconclass="fas fa-angle-double-left"
+                iconclass="fas fa-angle-double-left fa-2x"
                 iconposition="top"
                 stretch="both"
                 shape="rectangle"
+                selected="false"
                 customclass="zone-list-btn"
-                customclasspressed="zone-list-btn-pressed"
                 sendEventOnClick="Zone[{{idx1}}].Select" 
                 receiveStateSelected="Zone[{{idx1}}].Selected"
                 receivestatelabel="Zone[{{idx1}}].Label"
@@ -43,23 +44,25 @@
     <div class="device">
         <ch5-list id="Device.Contact" indexId="idx2" size="20" orientation="vertical" gestureable="true" scrollbar="true" receivestatesize="Device.Contact.Size">
             <template>
-            <div class="zone-list-item">
+            <div class="device-list-item">
                 <ch5-button 
-                id="list-btn"
-                iconclass="fas fa-angle-double-left"
+                iconclass="fas fa-angle-double-left fa-2x"
                 iconposition="top"
                 stretch="both"
                 shape="rectangle"
-                customclass="zone-list-btn"
-                customclasspressed="device-list-btn-pressed"
+                customclass="device-list-btn"
                 sendEventOnClick="Device[{{idx2}}].Select" 
                 receiveStateSelected="Device[{{idx2}}].Selected"
                 receivestatelabel="Device[{{idx2}}].Label"
-                label="Device {{idx1}}"
+                label="Device {{idx2}}"
                 ></ch5-button>
             </div> 
         </template>
         </ch5-list>
+    </div>
+
+    <div class="middle">
+
     </div>
 
     <div class="volume">
