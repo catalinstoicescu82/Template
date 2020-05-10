@@ -2,6 +2,15 @@
         margin: 0%;
         padding: 0%;
     }
+    
+    h1,
+    h2 {
+        color: rgb(211, 211, 211);
+        margin-left: 3%;
+    }
+    /* h1 {
+        font-size: 1.9rem;
+    } */
     /* Div's */
     
     div {
@@ -12,12 +21,26 @@
         border-width: thin;
     }
     
-    .header {
+    .position-absolute {
+        position: absolute;
+    }
+    
+    .info {
         height: 9%;
+        width: 70%;
+        border-right: none;
+    }
+    
+    .buttons-header {
+        border-left: none;
+        left: 70%;
+        width: 30%;
+        height: 9%;
+        text-align: center;
     }
     
     .zone {
-        position: absolute;
+        top: 9%;
         width: 12%;
         height: 91%;
         text-align: center;
@@ -25,7 +48,7 @@
     }
     
     .device {
-        position: absolute;
+        top: 9%;
         width: 12%;
         height: 91%;
         left: 11.5%;
@@ -33,16 +56,15 @@
     }
     
     .middle {
-        background-color: transparent;
-        position: absolute;
+        top: 9%;
         width: 68.8%;
         height: 91%;
         left: 23.4%;
-        border-bottom: none;
+        border: none;
     }
     
     .volume {
-        position: absolute;
+        top: 9%;
         width: 8%;
         height: 91%;
         left: 92%;
@@ -50,10 +72,23 @@
     }
     
     .volume-expanded {
+        top: 9%;
         width: 33%;
+        height: 91%;
         left: 67%;
-        visibility: hidden;
-        border-bottom: none;
+        border: none;
+    }
+    
+    .container {
+        display: fle;
+        background-color: royalblue;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    
+    .ch5-triggerview {
+        display: contents;
     }
     /* Lists */
     
@@ -101,10 +136,20 @@
     }
     
     .icon-btn {
-        position: ;
         border: none;
     }
     
     .extend-btn {
-        left: 90%;
+        left: 60%;
+        margin-left: 15%;
+    }
+    
+    .background-btn {
+        left: 60%;
+    }
+    
+    div.transparent-btn.extend-btn.ch5-button--default.ch5-button--selected,
+    div.transparent-btn.background-btn.ch5-button--default.ch5-button--selected {
+        background-color: transparent;
+        color: wheat;
     }
