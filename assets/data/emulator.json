@@ -3,12 +3,18 @@
             "type": "b",
             "event": "extendBtn",
             "trigger": true,
-            "actions": [{ "state": "extended", "type": "b", "logic": "toggle" }]
+            "actions": [{ "state": "showVolume", "type": "b", "logic": "set", "value": false },
+                { "state": "showSettings", "type": "b", "logic": "toggle" },
+                { "state": "showBackgrounds", "type": "b", "logic": "set", "value": false }
+            ]
         }, {
             "type": "b",
             "event": "backgroundBtn",
             "trigger": true,
-            "actions": [{ "state": "backgroundVisible", "type": "b", "logic": "toggle" }]
+            "actions": [{ "state": "showBackgrounds", "type": "b", "logic": "toggle" },
+                { "state": "showSettings", "type": "b", "logic": "set", "value": false },
+                { "state": "showVolume", "type": "b", "logic": "set", "value": false }
+            ]
         }, {
             "type": "b",
             "event": "Zone[0].Select",
@@ -17,15 +23,24 @@
         },
         {
             "type": "b",
+            "event": "Zone[1].Select",
+            "trigger": true,
+            "actions": [{ "state": "showMiddleDiv", "type": "b", "logic": "toggle" }]
+        },
+        {
+            "type": "b",
             "event": "Device[0].Select",
             "trigger": true,
             "actions": [{ "state": "Device[0].Selected", "type": "b", "logic": "set", "value": true }]
         }
     ],
-    "onStart": [{ "state": "extended", "type": "b", "logic": "set", "value": false },
+    "onStart": [{ "state": "showsettings", "type": "b", "logic": "set", "value": false },
+        { "state": "showVolume", "type": "b", "logic": "set", "value": true },
         { "state": "backgroundVisible", "type": "b", "logic": "set", "value": false },
+        { "state": "showMiddleDiv", "type": "b", "logic": "set", "value": false },
         { "state": "roomName", "type": "s", "logic": "set", "value": "Room Name" },
         { "state": "sourceName", "type": "s", "logic": "set", "value": "Source Name" },
+        { "state": "visibleSource", "type": "n", "logic": "set", "value": 1 },
         { "state": "Zone.Contact.Size", "type": "n", "logic": "set", "value": 13 },
         { "state": "Device.Contact.Size", "type": "n", "logic": "set", "value": 14 },
         { "state": "Zone[0].Selected", "type": "b", "logic": "set", "value": false },

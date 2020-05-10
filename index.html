@@ -17,15 +17,20 @@
     <ch5-background url="assets/images/ch5-stone-dark-bg.jpg">
     </ch5-background>
 
+
+    <!-- Room Name and Source Name Header -->
     <div class="info position-absolute">
         <h1 data-ch5-textcontent="roomName"></h1>
         <h2 data-ch5-textcontent="sourceName"></h2>
     </div>
+
+    <!-- Backgrounds and Extend Buttons -->
     <div class="buttons-header position-absolute">
         <ch5-button customclass="icon-btn transparent-btn background-btn" iconclass="far fa-image fa-3x" type="default" shape="rectangle" stretch="height" sendeventonclick="backgroundBtn"></ch5-button>
         <ch5-button customclass="icon-btn transparent-btn extend-btn" iconclass="fas fa-angle-double-left fa-2x" type="default" shape="rectangle" stretch="height" sendeventonclick="extendBtn"></ch5-button>
     </div>
 
+    <!-- Zones List -->
     <div class="zone position-absolute">
         <ch5-list id="Zone.Contact" indexId="idx1" size="20" orientation="vertical" gestureable="true" scrollbar="true" receivestatesize="Zone.Contact.Size">
             <template>
@@ -46,6 +51,7 @@
         </template>
         </ch5-list>
     </div>
+    <!-- Devices List -->
     <div class="device position-absolute">
         <ch5-list id="Device.Contact" indexId="idx2" size="20" orientation="vertical" gestureable="true" scrollbar="true" receivestatesize="Device.Contact.Size">
             <template>
@@ -66,30 +72,42 @@
         </ch5-list>
     </div>
 
-    <div class="middle position-absolute">
-        <ch5-triggerview receivestateshow="backgroundVisible">
-            <div class="container">
-                <ch5-button label="middle">
-                </ch5-button>
-            </div>
-        </ch5-triggerview>
-    </div>
 
 
-    <div class="volume position-absolute">
-        <ch5-button>
-        </ch5-button>
-    </div>
+    <!-- Backgrounds Subpage -->
 
 
-    <div class="volume-expanded position-absolute">
-        <ch5-triggerview receivestateshow="extended">
-            <div class="container">
-                <ch5-button label="volume expanded">
-                </ch5-button>
-            </div>
-        </ch5-triggerview>
-    </div>
+    <ch5-triggerview noshowtype="display" receivestateshow="showBackgrounds">
+        <div class="backgrounds position-absolute">
+            <h1>Backgrounds</h1>
+        </div>
+        <!--  <div class="volume position-absolute">
+            <h1>Volume</h1>
+        </div> -->
+    </ch5-triggerview>
+
+
+
+    <!-- Devices Subpages -->
+
+    <ch5-triggerview noshowtype="display" receivestateshow="showMiddleDiv">
+        <div class="middle position-absolute"></div>
+    </ch5-triggerview>
+
+    <!-- Volume Subpage -->
+
+    <ch5-triggerview noshowtype="display" receivestateshow="showVolume">
+        <div class="volume position-absolute">
+        </div>
+    </ch5-triggerview>
+
+    <!-- Settings Subpage -->
+
+    <ch5-triggerview noshowtype="display" receivestateshow="showSettings">
+        <div class="settings position-absolute">
+            <h1>Settings</h1>
+        </div>
+    </ch5-triggerview>
 
 
     <script src="node_modules/@crestron/ch5-crcomlib/build_bundles/umd/cr-com-lib.js"></script>
