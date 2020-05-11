@@ -1,40 +1,43 @@
 {
     "cues": [{
-            "type": "b",
-            "event": "extendBtn",
-            "trigger": true,
-            "actions": [{ "state": "showVolume", "type": "b", "logic": "set", "value": false },
-                { "state": "showSettings", "type": "b", "logic": "toggle" },
-                { "state": "showBackgrounds", "type": "b", "logic": "set", "value": false }
-            ]
-        }, {
-            "type": "b",
-            "event": "backgroundBtn",
-            "trigger": true,
-            "actions": [{ "state": "showBackgrounds", "type": "b", "logic": "toggle" },
-                { "state": "showSettings", "type": "b", "logic": "set", "value": false },
-                { "state": "showVolume", "type": "b", "logic": "set", "value": false }
-            ]
-        }, {
-            "type": "b",
-            "event": "Zone[0].Select",
-            "trigger": true,
-            "actions": [{ "state": "Zone[0].Selected", "type": "b", "logic": "set", "value": true }]
-        },
-        {
-            "type": "b",
-            "event": "Zone[1].Select",
-            "trigger": true,
-            "actions": [{ "state": "showMiddleDiv", "type": "b", "logic": "toggle" }]
-        },
-        {
-            "type": "b",
-            "event": "Device[0].Select",
-            "trigger": true,
-            "actions": [{ "state": "Device[0].Selected", "type": "b", "logic": "set", "value": true }]
-        }
-    ],
+        "type": "b",
+        "event": "extendBtn",
+        "trigger": true,
+        "actions": [{ "state": "showVolume", "type": "b", "logic": "set", "value": false },
+            { "state": "showSettings", "type": "b", "logic": "toggle" },
+            { "state": "showBackgrounds", "type": "b", "logic": "set", "value": false }
+        ]
+    }, {
+        "type": "b",
+        "event": "backgroundBtn",
+        "trigger": true,
+        "actions": [{ "state": "showBackgrounds", "type": "b", "logic": "toggle" },
+            { "state": "showSettings", "type": "b", "logic": "set", "value": false },
+            { "state": "showVolume", "type": "b", "logic": "set", "value": false }
+        ]
+    }, {
+        "type": "b",
+        "event": "powerBtn",
+        "trigger": true,
+        "actions": [{ "state": "powerFB", "type": "b", "logic": "toggle" }]
+    }, {
+        "type": "b",
+        "event": "volUpBtn",
+        "trigger": true,
+        "actions": [{ "state": "volFB", "type": "n", "logic": "increment", "offset": 1500 }]
+    }, {
+        "type": "b",
+        "event": "volDownBtn",
+        "trigger": true,
+        "actions": [{ "state": "volFB", "type": "n", "logic": "decrement", "offset": 1500 }]
+    }, {
+        "type": "b",
+        "event": "volMuteBtn",
+        "trigger": true,
+        "actions": [{ "state": "volFB", "type": "object", "logic": "set", "value": { "rcb": { "value": 0, "time": 1000 } } }]
+    }],
     "onStart": [{ "state": "showsettings", "type": "b", "logic": "set", "value": false },
+        { "state": "powerFB", "type": "b", "logic": "set", "value": false },
         { "state": "showVolume", "type": "b", "logic": "set", "value": true },
         { "state": "backgroundVisible", "type": "b", "logic": "set", "value": false },
         { "state": "showMiddleDiv", "type": "b", "logic": "set", "value": false },
@@ -42,48 +45,6 @@
         { "state": "sourceName", "type": "s", "logic": "set", "value": "Source Name" },
         { "state": "visibleSource", "type": "n", "logic": "set", "value": 1 },
         { "state": "Zone.Contact.Size", "type": "n", "logic": "set", "value": 13 },
-        { "state": "Device.Contact.Size", "type": "n", "logic": "set", "value": 14 },
-        { "state": "Zone[0].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Zone[1].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Zone[2].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Zone[3].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Zone[4].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Zone[5].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Zone[6].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Zone[7].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Zone[8].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Zone[9].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Zone[10].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Zone[11].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Zone[12].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Zone[13].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Zone[14].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Zone[15].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Zone[16].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Zone[17].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Zone[18].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Zone[19].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Zone[20].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Device[0].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Device[1].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Device[2].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Device[3].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Device[4].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Device[5].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Device[6].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Device[7].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Device[8].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Device[9].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Device[10].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Device[11].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Device[12].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Device[13].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Device[14].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Device[15].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Device[16].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Device[17].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Device[18].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Device[19].Selected", "type": "b", "logic": "set", "value": false },
-        { "state": "Device[20].Selected", "type": "b", "logic": "set", "value": false }
+        { "state": "Device.Contact.Size", "type": "n", "logic": "set", "value": 14 }
     ]
 }

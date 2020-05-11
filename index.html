@@ -10,111 +10,92 @@
     <link rel="stylesheet" href="css/styles.css">
 
     <script src="node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
-
 </head>
 
-<body>
+<body onload="load()">
     <ch5-background url="assets/images/ch5-stone-dark-bg.jpg">
     </ch5-background>
-
-
-    <!-- Room Name and Source Name Header -->
-    <div class="info position-absolute">
-        <h1 data-ch5-textcontent="roomName"></h1>
-        <h2 data-ch5-textcontent="sourceName"></h2>
-    </div>
-
-    <!-- Backgrounds and Extend Buttons -->
-    <div class="buttons-header position-absolute">
-        <ch5-button customclass="icon-btn transparent-btn background-btn" iconclass="far fa-image fa-3x" type="default" shape="rectangle" stretch="height" sendeventonclick="backgroundBtn"></ch5-button>
-        <ch5-button customclass="icon-btn transparent-btn extend-btn" iconclass="fas fa-angle-double-left fa-2x" type="default" shape="rectangle" stretch="height" sendeventonclick="extendBtn"></ch5-button>
-    </div>
-
-    <!-- Zones List -->
-    <div class="zone position-absolute">
-        <ch5-list id="Zone.Contact" indexId="idx1" size="20" orientation="vertical" gestureable="true" scrollbar="true" receivestatesize="Zone.Contact.Size">
-            <template>
-            <div class="zone-list-item">
-                <ch5-button 
-                iconclass="fas fa-angle-double-left fa-2x"
-                iconposition="top"
-                stretch="both"
-                shape="rectangle"
-                selected="false"
-                customclass="zone-list-btn"
-                sendEventOnClick="Zone[{{idx1}}].Select" 
-                receiveStateSelected="Zone[{{idx1}}].Selected"
-                receivestatelabel="Zone[{{idx1}}].Label"
-                label="Room {{idx1}}"
-                ></ch5-button>
-            </div> 
-        </template>
-        </ch5-list>
-    </div>
-    <!-- Devices List -->
-    <div class="device position-absolute">
-        <ch5-list id="Device.Contact" indexId="idx2" size="20" orientation="vertical" gestureable="true" scrollbar="true" receivestatesize="Device.Contact.Size">
-            <template>
-            <div class="device-list-item">
-                <ch5-button 
-                iconclass="fas fa-angle-double-left fa-2x"
-                iconposition="top"
-                stretch="both"
-                shape="rectangle"
-                customclass="device-list-btn"
-                sendEventOnClick="Device[{{idx2}}].Select" 
-                receiveStateSelected="Device[{{idx2}}].Selected"
-                receivestatelabel="Device[{{idx2}}].Label"
-                label="Device {{idx2}}"
-                ></ch5-button>
-            </div> 
-        </template>
-        </ch5-list>
-    </div>
-
-
-
-    <!-- Backgrounds Subpage -->
-
-
-    <ch5-triggerview noshowtype="display" receivestateshow="showBackgrounds">
-        <div class="backgrounds position-absolute">
-            <h1>Backgrounds</h1>
+    <div class="header">
+        <div class="header-info">
+            <h1 data-ch5-textcontent="roomName"></h1>
+            <h2 data-ch5-textcontent="sourceName"></h2>
         </div>
-        <!--  <div class="volume position-absolute">
-            <h1>Volume</h1>
-        </div> -->
-    </ch5-triggerview>
-
-
-
-    <!-- Devices Subpages -->
-
-    <ch5-triggerview noshowtype="display" receivestateshow="showMiddleDiv">
-        <div class="middle position-absolute"></div>
-    </ch5-triggerview>
-
-    <!-- Volume Subpage -->
-
-    <ch5-triggerview noshowtype="display" receivestateshow="showVolume">
-        <div class="volume position-absolute">
+        <div class="header-buttons">
+            <ch5-button customclass="icon-btn transparent-btn" customclasspressed="icon-btn-pressed" iconclass="far fa-image fa-3x" type="default" shape="rectangle" stretch="height" sendeventonclick="backgroundBtn"></ch5-button>
+            <ch5-button customclass="icon-btn transparent-btn" customclasspressed="icon-btn-pressed" iconclass="fas fa-angle-double-left fa-2x" type="default" shape="rectangle" stretch="height" sendeventonclick="extendBtn"></ch5-button>
         </div>
-    </ch5-triggerview>
-
-    <!-- Settings Subpage -->
-
-    <ch5-triggerview noshowtype="display" receivestateshow="showSettings">
-        <div class="settings position-absolute">
-            <h1>Settings</h1>
+    </div>
+    <div class="body">
+        <div class="body-zone">
+            <ch5-list id="Zone.Contact" itemwidth="100%" itemheight="14%" indexId="idx1" size="20" orientation="vertical" gestureable="true" scrollbar="false" receivestatesize="Zone.Contact.Size">
+                <template>
+                    <ch5-button
+                    id = zone[{{idx1}}] 
+                    iconclass="fas fa-bed fa-2x"
+                    iconposition="top"
+                    stretch="both"
+                    shape="rectangle"
+                    selected="false"
+                    customclass="zone-btn"
+                    sendEventOnClick="Zone[{{idx1}}].Select" 
+                    receiveStateSelected="Zone[{{idx1}}].Selected"
+                    receivestatelabel="Zone[{{idx1}}].Label"
+                    label="Room {{idx1}}"
+                    ></ch5-button>
+            </template>
+            </ch5-list>
         </div>
-    </ch5-triggerview>
+        <div class="body-device">
+            <ch5-list id="Device.Contact" itemwidth="100%" itemheight="14%" indexId="idx2" size="20" orientation="vertical" gestureable="true" scrollbar="false" receivestatesize="Device.Contact.Size">
+                <template>
+                    <ch5-button 
+                    id="device[{{idx2}}]"
+                    iconclass="fas fa-tv fa-2x"
+                    iconposition="top"
+                    stretch="both"
+                    shape="rectangle"
+                    customclass="device-btn"
+                    sendEventOnClick="Device[{{idx2}}].Select" 
+                    receiveStateSelected="Device[{{idx2}}].Selected"
+                    receivestatelabel="Device[{{idx2}}].Label"
+                    label="Device {{idx2}}"
+                    ></ch5-button>
+            </template>
+            </ch5-list>
+        </div>
+        <div class="body-middle"></div>
+        <div class="body-volume">
+            <div class="body-volume-power">
+                <ch5-button customclass="power-btn" customclasspressed="icon-btn-pressed" iconclass="fas fa-power-off fa-3x" type="default" shape="rectangle" sendeventonclick="powerBtn" receivestateselected="powerFB"></ch5-button>
+            </div>
+            <div class="body-volume-volmute">
+                <ch5-button customclass="icon-btn transparent-btn" customclasspressed="icon-btn-pressed" iconclass="fas fa-volume-mute fa-3x" type="default" shape="rectangle" stretch="height" sendeventonclick="volMuteBtn"></ch5-button>
+            </div>
+            <div class="body-volume-volup">
+                <ch5-button customclass="icon-btn transparent-btn" customclasspressed="icon-btn-pressed" iconclass="fas fa-volume-up fa-3x" type="default" shape="rectangle" stretch="height" sendeventonclick="volUpBtn"></ch5-button>
+            </div>
+            <div class="body-volume-vol">
+                <ch5-slider customclass="volume-slider" orientation="vertical" nohandle="true" stretch="height" receivestatevalue="volFB">
+                </ch5-slider>
+            </div>
+            <div class="body-volume-voldn">
+                <ch5-button customclass="icon-btn transparent-btn" customclasspressed="icon-btn-pressed" iconclass="fas fa-volume-down fa-3x" type="default" shape="rectangle" stretch="height" sendeventonclick="volDownBtn"></ch5-button>
+            </div>
+        </div>
+    </div>
 
 
-    <script src="node_modules/@crestron/ch5-crcomlib/build_bundles/umd/cr-com-lib.js"></script>
+
+    <script src="node_modules/@crestron/ch5-crcomlib/build_bundles/umd/cr-com-lib.js">
+    </script>
 
     <!-- For emulator -->
     <script src="./assets/vendor/service.js"></script>
     <script src="./assets/vendor/app.js"></script>
+
 </body>
+<footer>
+    <script src="./index.js"></script>
+</footer>
 
 </html>
