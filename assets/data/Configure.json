@@ -1,0 +1,187 @@
+{
+    "Rooms": [{
+        "RoomName": "Living",
+        "RoomID": 1,
+        "RoomIcon": 20,
+        "AudioOutput": 1,
+        "VideoOutput": 1,
+        "Lights": {
+            "Name": "Lights",
+            "ID": 1,
+            "Available": 1,
+            "SubpageID": 21,
+            "Icon": 39
+        },
+        "Blinds": {
+            "Name": "Blinds",
+            "ID": 2,
+            "Available": 1,
+            "SubpageID": 22,
+            "Icon": 56
+        },
+        "HVAC": {
+            "Name": "Climate",
+            "ID": 3,
+            "Available": 1,
+            "SubpageID": 23,
+            "Icon": 12
+        },
+        "Sources": [{
+            "Name": "Sky 1",
+            "ID": 4,
+            "Available": 1,
+            "SubpageID": 25,
+            "Icon": 52,
+            "AudioInput": 1,
+            "VideoInput": 1
+        }, {
+            "Name": "Sky 2",
+            "ID": 5,
+            "Available": 1,
+            "SubpageID": 25,
+            "Icon": 52,
+            "AudioInput": 2,
+            "VideoInput": 2
+        }, {
+            "Name": "Sky 3",
+            "ID": 6,
+            "Available": 1,
+            "SubpageID": 25,
+            "Icon": 52,
+            "AudioInput": 3,
+            "VideoInput": 3
+        }, {
+            "Name": "Apple TV 1",
+            "ID": 7,
+            "Available": 1,
+            "SubpageID": 24,
+            "Icon": 1,
+            "AudioInput": 4,
+            "VideoInput": 4
+        }, {
+            "Name": "Apple TV 2",
+            "ID": 8,
+            "Available": 1,
+            "SubpageID": 24,
+            "Icon": 1,
+            "AudioInput": 5,
+            "VideoInput": 5
+        }, {
+            "Name": "Apple TV 3",
+            "ID": 9,
+            "Available": 0,
+            "SubpageID": 24,
+            "Icon": 1,
+            "AudioInput": 7,
+            "VideoInput": 7
+        }, {
+            "Name": "Bluray",
+            "ID": 10,
+            "Available": 1,
+            "SubpageID": 26,
+            "Icon": 4,
+            "AudioInput": 8,
+            "VideoInput": 8
+        }, {
+            "Name": "Sonos",
+            "ID": 11,
+            "Available": 0,
+            "SubpageID": 27,
+            "Icon": 44,
+            "AudioInput": 9,
+            "VideoInput": 0
+        }]
+    }, {
+        "RoomName": "Bedroom",
+        "RoomID": 2,
+        "RoomIcon": 3,
+        "AudioOutput": 1,
+        "VideoOutput": 1,
+        "Lights": {
+            "Name": "Lights",
+            "ID": 39,
+            "Available": 1,
+            "SubpageID": 21,
+            "Icon": 0
+        },
+        "Blinds": {
+            "Name": "Blinds",
+            "ID": 56,
+            "Available": 1,
+            "SubpageID": 22,
+            "Icon": 1
+        },
+        "HVAC": {
+            "Name": "Climate",
+            "ID": 3,
+            "Available": 0,
+            "SubpageID": 23,
+            "Icon": 12
+        },
+        "Sources": [{
+            "Name": "Sky 1",
+            "ID": 4,
+            "Available": 1,
+            "SubpageID": 25,
+            "Icon": 52,
+            "AudioInput": 1,
+            "VideoInput": 1
+        }, {
+            "Name": "Sky 2",
+            "ID": 5,
+            "Available": 0,
+            "SubpageID": 25,
+            "Icon": 52,
+            "AudioInput": 2,
+            "VideoInput": 2
+        }, {
+            "Name": "Sky 3",
+            "ID": 6,
+            "Available": 0,
+            "SubpageID": 25,
+            "Icon": 52,
+            "AudioInput": 3,
+            "VideoInput": 3
+        }, {
+            "Name": "Apple TV 1",
+            "ID": 7,
+            "Available": 1,
+            "SubpageID": 24,
+            "Icon": 1,
+            "AudioInput": 4,
+            "VideoInput": 4
+        }, {
+            "Name": "Apple TV 2",
+            "ID": 8,
+            "Available": 0,
+            "SubpageID": 24,
+            "Icon": 1,
+            "AudioInput": 5,
+            "VideoInput": 5
+        }, {
+            "Name": "Apple TV 3",
+            "ID": 9,
+            "Available": 0,
+            "SubpageID": 24,
+            "Icon": 1,
+            "AudioInput": 7,
+            "VideoInput": 7
+        }, {
+            "Name": "Bluray",
+            "ID": 10,
+            "Available": 0,
+            "SubpageID": 26,
+            "Icon": 4,
+            "AudioInput": 8,
+            "VideoInput": 8
+        }, {
+            "Name": "Sonos",
+            "ID": 11,
+            "Available": 1,
+            "SubpageID": 27,
+            "Icon": 44,
+            "AudioInput": 9,
+            "VideoInput": 0
+        }]
+    }]
+}

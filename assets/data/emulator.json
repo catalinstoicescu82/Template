@@ -36,15 +36,5 @@
         "trigger": true,
         "actions": [{ "state": "volFB", "type": "object", "logic": "set", "value": { "rcb": { "value": 0, "time": 1000 } } }]
     }],
-    "onStart": [{ "state": "showsettings", "type": "b", "logic": "set", "value": false },
-        { "state": "powerFB", "type": "b", "logic": "set", "value": false },
-        { "state": "showVolume", "type": "b", "logic": "set", "value": true },
-        { "state": "backgroundVisible", "type": "b", "logic": "set", "value": false },
-        { "state": "showMiddleDiv", "type": "b", "logic": "set", "value": false },
-        { "state": "roomName", "type": "s", "logic": "set", "value": "Room Name" },
-        { "state": "sourceName", "type": "s", "logic": "set", "value": "Source Name" },
-        { "state": "visibleSource", "type": "n", "logic": "set", "value": 1 },
-        { "state": "Zone.Contact.Size", "type": "n", "logic": "set", "value": 13 },
-        { "state": "Device.Contact.Size", "type": "n", "logic": "set", "value": 14 }
-    ]
+    "onStart": []
 }

@@ -156,6 +156,12 @@
         color: black;
     }
     
+    div.zone-btn button img.ch5-button--img,
+    div.device-btn button img.ch5-button--img {
+        height: 50%;
+        width: 50%;
+    }
+    
     div.device-btn.ch5-button--default.ch5-button--selected {
         background-color: orangered;
         color: black;
@@ -163,6 +169,7 @@
     /* ----Lists---- */
     
     div.list-item {
+        display: inline-table;
         padding: 0;
         background-color: transparent;
         border: none;

@@ -13,7 +13,7 @@
 </head>
 
 <body onload="load()">
-    <ch5-background url="assets/images/ch5-stone-dark-bg.jpg">
+    <ch5-background url="assets/images/backgrounds/ch5-stone-dark-bg.jpg">
     </ch5-background>
     <div class="header">
         <div class="header-info">
@@ -27,38 +27,36 @@
     </div>
     <div class="body">
         <div class="body-zone">
-            <ch5-list id="Zone.Contact" itemwidth="100%" itemheight="14%" indexId="idx1" size="20" orientation="vertical" gestureable="true" scrollbar="false" receivestatesize="Zone.Contact.Size">
+            <ch5-list id="zones" itemwidth="100%" itemheight="14%" indexId="idx1" size="20" orientation="vertical" gestureable="true" scrollbar="false" receivestatesize="zonesSize" receivestatetemplatevars="zonesVars">
                 <template>
                     <ch5-button
-                    id = zone[{{idx1}}] 
-                    iconclass="fas fa-bed fa-2x"
+                    receivestateiconurl="zone[{{idx1}}].Icon"
                     iconposition="top"
                     stretch="both"
                     shape="rectangle"
-                    selected="false"
                     customclass="zone-btn"
-                    sendEventOnClick="Zone[{{idx1}}].Select" 
-                    receiveStateSelected="Zone[{{idx1}}].Selected"
-                    receivestatelabel="Zone[{{idx1}}].Label"
-                    label="Room {{idx1}}"
+                    sendEventOnClick="zone[{{idx1}}].Select" 
+                    receiveStateSelected="zone[{{idx1}}].Selected"
+                    label="{{label}}"
                     ></ch5-button>
             </template>
             </ch5-list>
         </div>
         <div class="body-device">
-            <ch5-list id="Device.Contact" itemwidth="100%" itemheight="14%" indexId="idx2" size="20" orientation="vertical" gestureable="true" scrollbar="false" receivestatesize="Device.Contact.Size">
+            <ch5-list id="devices" itemwidth="100%" itemheight="14%" indexId="idx2" size="20" orientation="vertical" gestureable="true" scrollbar="false" receivestatesize="devicesSize" receivestatetemplatevars="devicesVars">
                 <template>
                     <ch5-button 
-                    id="device[{{idx2}}]"
-                    iconclass="fas fa-tv fa-2x"
+                    noshowtype = "remove"
+                    receivestateshow="device[{{idx2}}].Visible"
+                    receivestateiconurl="device[{{idx2}}].Icon"
                     iconposition="top"
                     stretch="both"
                     shape="rectangle"
                     customclass="device-btn"
-                    sendEventOnClick="Device[{{idx2}}].Select" 
-                    receiveStateSelected="Device[{{idx2}}].Selected"
-                    receivestatelabel="Device[{{idx2}}].Label"
-                    label="Device {{idx2}}"
+                    sendEventOnClick="device[{{idx2}}].Select" 
+                    receiveStateSelected="device[{{idx2}}].Selected"
+                    receivestatelabel="device[{{idx2}}].Label"
+                    label="{{label}}"
                     ></ch5-button>
             </template>
             </ch5-list>
@@ -95,6 +93,7 @@
 
 </body>
 <footer>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./index.js"></script>
 </footer>
 
